@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="index,follow">
+<title>Startool — Политика конфиденциальности / Privacy Policy</title>
+<style>
+:root{color-scheme:light dark;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:#0d1420;color:#eaf1fb}
+*{box-sizing:border-box}body{margin:0;padding:32px 16px;background:radial-gradient(900px 480px at 10% 0,rgba(59,130,246,.17),transparent 60%),#0d1420;line-height:1.65}
+main{max-width:900px;margin:auto;padding:32px;border:1px solid rgba(156,184,219,.18);border-radius:20px;background:rgba(20,31,47,.93);box-shadow:0 24px 70px rgba(0,0,0,.35)}
+h1{font-size:30px;line-height:1.2;margin:0 0 8px}h2{font-size:20px;margin:30px 0 10px;color:#b9d8ff}h3{font-size:16px;margin:20px 0 8px}
+p,li{color:#c5d2e3}a{color:#8fc4ff}code{background:#0b1421;padding:2px 5px;border-radius:5px}.meta{color:#91a8c3;font-size:13px}.notice{padding:14px 16px;border:1px solid rgba(73,142,224,.35);border-radius:12px;background:rgba(37,87,145,.17);margin:18px 0}.lang{display:inline-block;border:1px solid rgba(145,175,211,.25);border-radius:999px;padding:3px 9px;font-size:11px;color:#a8c8ef;margin-bottom:12px}.contact{padding:12px;border:1px dashed rgba(224,184,112,.45);border-radius:10px;color:#f2d7a8}
+</style>
+</head><body><main>
+<span class="lang">РУССКАЯ ВЕРСИЯ</span>
+<h1>Startool — Политика конфиденциальности</h1>
+<p class="meta">Последнее обновление: 24 ноября 2026 года · Версия расширения: 0.36.0</p>
+<div class="notice"><b>Кратко.</b> Startool обрабатывает данные страниц Starvell преимущественно локально в твоём браузере. Текст переписки передаётся Google только после отдельного согласия Firefox и только когда пользователь вручную запускает Gemini-корректор или переводчик.</div>
+<h2>1. Кто мы</h2>
+<p>Startool — независимое неофициальное расширение браузера для Starvell. Оно не связано с Starvell и не является продуктом Google. Разработчик Startool не управляет серверами Starvell или Google.</p>
+<h2>2. Какие данные обрабатываются локально</h2>
+<p>Для работы функций расширение читает элементы открытых страниц Starvell. В зависимости от используемых функций локально могут обрабатываться:</p>
+<ul>
+<li>имена/ники собеседников, тексты сообщений и идентификаторы заказов в открытом диалоге — для переменных шаблонов, команд бота, закрепления и кнопок чата;</li>
+<li>уведомления о покупках и элементы текущего заказа — для автоответчика;</li>
+<li>видимые даты, статусы и суммы заказов — для локальной финансовой аналитики;</li>
+<li>заметки CRM, быстрые фразы, шаблоны автоответов, команды и настройки, которые вводит сам пользователь.</li>
+</ul>
+<p>Эти данные обрабатываются в контексте страницы и/или сохраняются в <code>browser.storage.local</code> Firefox. Startool не отправляет их на собственный сервер, не продаёт и не сдаёт в аренду.</p>
+<h2>3. Передача данных сторонним сервисам</h2>
+<p>Передача текста сторонним сервисам отключена до получения необязательного разрешения Firefox <code>personalCommunications</code>. Пользователь выдаёт его через встроенное окно Firefox, открыв значок Startool на панели браузера. Разрешение можно отозвать в настройках дополнения Firefox; после отзыва фоновые запросы блокируются.</p>
+<h3>Google Gemini API</h3>
+<p>Если пользователь нажимает кнопку ✨ «Исправить текст» и ранее разрешил передачу данных, расширение отправляет в Google Gemini API только текущий текст черновика из поля ввода вместе с инструкцией для корректуры. Полная история чата, профиль Starvell, CRM-заметки и история заказов в запрос не включаются. API-ключ пользователя передаётся Google в HTTP-заголовке <code>x-goog-api-key</code> для авторизации.</p>
+<p>В бесплатном уровне Gemini API Google указывает, что отправленный контент может использоваться для улучшения продуктов Google. В платном уровне Google указывает, что контент не используется для улучшения продуктов. Условия и квоты могут изменяться; перед отправкой конфиденциальной информации проверь актуальные условия Google. Не отправляй пароли, платёжные данные и другие секреты.</p>
+<h3>Google Translate</h3>
+<p>Если пользователь вручную запускает перевод сообщения и разрешение Firefox выдано, расширение передаёт текст, выбранный для перевода, сервису Google Translate через HTTPS endpoint <code>translate.googleapis.com</code>. Полная история переписки не отправляется.</p>
+<h3>Google Fonts</h3>
+<p>Если пользователь использует настройки типографики, браузер может запросить таблицу стилей у <code>fonts.googleapis.com</code> и файлы шрифтов у <code>fonts.gstatic.com</code>. Эти запросы не содержат текст переписки, черновики или данные заказов, но Google может получать стандартные сетевые данные, например IP-адрес и технические заголовки HTTP.</p>
+<h3>Пользовательские фоновые изображения</h3>
+<p>Если пользователь указывает внешний HTTPS URL в настройке пользовательского фона, браузер загружает изображение с выбранного пользователем сервера. Этот сервер может получать стандартные сетевые данные запроса. Startool не выбирает такой адрес за пользователя.</p>
+<h2>4. Автоответчик, чат-бот и отправка сообщений в Starvell</h2>
+<p>Автоответчик и чат-бот могут отправлять настроенные пользователем ответы через интерфейс Starvell. Такие сообщения передаются Starvell и адресату чата как обычные сообщения пользователя. Они не отправляются на сервер разработчика Startool. Автоматические сообщения должны быть настроены и включены самим пользователем.</p>
+<h2>5. Локальное хранение и резервные копии</h2>
+<p>Настройки, команды, шаблоны, закреплённые чаты, CRM-заметки, данные аналитики и Gemini API-ключ хранятся в локальном хранилище расширения Firefox. Startool не шифрует API-ключ отдельным паролем. Экспорт резервной копии может включать ключ в незашифрованном JSON-файле; не делись такими файлами и удали их, когда они больше не нужны.</p>
+<p>Пользователь может удалить локальные данные через управление данными расширения/удаление Startool в Firefox. Отдельно удали созданные JSON-резервные копии и другие экспортированные файлы.</p>
+<h2>6. Аналитика, реклама и продажа данных</h2>
+<p>Startool не содержит встроенной рекламной аналитики, трекеров использования, телеметрии или собственного сервера сбора статистики. Разработчик не продаёт и не передаёт данные пользователей третьим лицам. Сетевые обращения описаны выше и происходят только для включённых внешних функций.</p>
+<h2>7. Сторонние политики</h2>
+<ul>
+<li><a href="https://policies.google.com/privacy" rel="noopener">Политика конфиденциальности Google</a>.</li>
+<li><a href="https://ai.google.dev/gemini-api/terms" rel="noopener">Дополнительные условия Gemini API</a>.</li>
+<li><a href="https://ai.google.dev/gemini-api/docs/pricing" rel="noopener">Уровни обслуживания и использование данных Gemini API</a>.</li>
+<li><a href="https://starvell.com/" rel="noopener">Starvell</a> — независимая платформа, на которой работает расширение.</li>
+</ul>
+<h2>8. Изменения и контакт</h2>
+<p>Политика может обновляться вместе с изменениями Startool или требований сторонних сервисов. Актуальная дата указана в начале документа.</p>
+<div class="contact"><b>Контакт по вопросам конфиденциальности:</b> <a href="mailto:magomed422kadyrov@gmail.com">magomed422kadyrov@gmail.com</a> · <a href="https://discord.gg/Av6BTQ66Vu" target="_blank" rel="noopener noreferrer">Discord поддержки</a>.</div>
+<hr style="border:0;border-top:1px solid rgba(150,180,220,.18);margin:34px 0">
+<span class="lang">ENGLISH VERSION</span>
+<h1>Startool — Privacy Policy</h1>
+<p class="meta">Last updated: November 24, 2026 · Extension version: 0.36.0</p>
+<div class="notice"><b>Summary.</b> Startool processes Starvell page data primarily inside the browser. Message text is sent to Google only after the user grants Firefox's built-in <code>personalCommunications</code> data permission and manually invokes Gemini correction or translation.</div>
+<h2>1. About Startool</h2>
+<p>Startool is an independent, unofficial browser extension for Starvell. It is not affiliated with Starvell or Google. The Startool developer does not operate Starvell's or Google's servers.</p>
+<h2>2. Data processed locally</h2>
+<p>Depending on the features used, Startool reads visible elements of Starvell pages and may process locally: chat participant names, message text and order identifiers; purchase notifications; visible order dates, statuses and amounts; and user-created CRM notes, quick phrases, reply templates, bot commands and settings.</p>
+<p>This data is processed in the page context and/or stored in Firefox <code>browser.storage.local</code>. Startool does not send it to a Startool-operated server, sell it or rent it.</p>
+<h2>3. Data sent to third-party services</h2>
+<p>Text transmission is disabled until the user grants Firefox's optional <code>personalCommunications</code> data permission through Firefox's built-in consent prompt opened from the Startool toolbar button. The permission can be revoked in Firefox Add-ons settings. Background requests are blocked after revocation.</p>
+<h3>Google Gemini API</h3>
+<p>When the user clicks the ✨ correction button and has granted the permission, Startool sends only the current composer draft to the Google Gemini API together with a proofreading instruction. It does not send the full chat history, Starvell profile, CRM notes or order history. The user's API key is sent to Google in the <code>x-goog-api-key</code> HTTP header for authentication.</p>
+<p>Google states that content submitted through the Gemini API Free Tier may be used to improve Google products. Google states that content submitted through the Paid Tier is not used for product improvement. Terms and quotas may change. Do not send passwords, payment details or other secrets.</p>
+<h3>Google Translate</h3>
+<p>When the user manually invokes translation and has granted the Firefox permission, Startool sends only the message text selected for translation to Google's HTTPS endpoint at <code>translate.googleapis.com</code>. The full conversation is not sent.</p>
+<h3>Google Fonts</h3>
+<p>When typography settings are used, the browser may request a stylesheet from <code>fonts.googleapis.com</code> and font files from <code>fonts.gstatic.com</code>. These requests do not contain chat text, drafts or order data, but Google may receive standard network information such as the IP address and HTTP technical headers.</p>
+<h3>User-provided background URLs</h3>
+<p>If the user enters an external HTTPS URL for a custom background, the browser loads the image from the selected host. That host may receive standard request metadata. Startool does not choose that URL for the user.</p>
+<h2>4. Auto-replies, chatbot and messages sent through Starvell</h2>
+<p>The auto-reply and chatbot features can send user-configured replies through Starvell's interface. Those messages are sent to Starvell and the chat recipient as ordinary user messages. They are not sent to a Startool-operated server. Automated messaging must be configured and enabled by the user.</p>
+<h2>5. Local storage and backups</h2>
+<p>Settings, commands, templates, pinned chats, CRM notes, analytics data and the Gemini API key are stored in Firefox extension-local storage. Startool does not separately encrypt the API key. An exported backup may include the key in an unencrypted JSON file. Do not share such backups and delete them when no longer needed.</p>
+<p>Users can remove local extension data through Firefox's add-on data management or by uninstalling Startool. Separately delete JSON backups and other exported files.</p>
+<h2>6. Analytics, advertising and sale of data</h2>
+<p>Startool has no built-in advertising analytics, usage trackers, telemetry or developer-operated data collection server. The developer does not sell or share user data. Network requests are described above and are made only for enabled external features.</p>
+<h2>7. Third-party policies</h2>
+<ul><li><a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li><li><a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms</a>.</li><li><a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini API tiers and data use</a>.</li><li><a href="https://starvell.com/">Starvell</a>.</li></ul>
+<h2>8. Changes and contact</h2>
+<p>This policy may be updated when Startool or third-party service practices change. The effective date appears at the top.</p>
+<div class="contact"><b>Privacy contact:</b> <a href="mailto:magomed422kadyrov@gmail.com">magomed422kadyrov@gmail.com</a> · <a href="https://discord.gg/Av6BTQ66Vu" target="_blank" rel="noopener noreferrer">Discord support</a>.</div>
+</main></body></html>
